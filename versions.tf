@@ -12,4 +12,13 @@ terraform {
   }
 
   required_version = ">= 0.14.0"
+
+   backend "remote" {
+    hostname      = "app.terraform.io"
+    organization  = "vinnielee-io"
+
+    workspaces {
+      name = "tfc-guide"
+    }
+  }
 }
