@@ -24,6 +24,6 @@ resource "aws_instance" "ubuntu" {
   instance_type = var.instance_type
 
   tags = {
-    Name = "${terraform.workspace}-${count.index}"
+    Name = "ubuntu-instance-${count.index}"
   }
 }
